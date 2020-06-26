@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+}
+
+.call-to-action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+}
+
+.call-to-action .button-effect {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 20px;
+}
+
+.call-to-action .button-effect:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #d64049;
+    width: 0;
+    overflow: hidden;
+    transition: 500ms;
+    white-space: nowrap;
+}
+
+.call-to-action:hover .button-effect:before {
+    width: 100%;
+}
+
+.call-to-action .arrow {
+    overflow: hidden;
+    display: inline-block;
+    width: 50px;
+    height: 12px;
+    position: relative;
+}
+
+.call-to-action .arrow .arrow-img {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transition: 300ms;
+}
+
+.call-to-action .arrow .arrow-1 {
+    transform: translate(50%, -50%);
+}
+
+.call-to-action .arrow .arrow-2 {
+    transform: translate(-200%, -50%);
+}
+
+.call-to-action:hover .arrow .arrow-1 {
+    transform: translate(200%, -50%);
+}
+
+.call-to-action:hover .arrow .arrow-2 {
+    transform: translate(50%, -50%);
+}
